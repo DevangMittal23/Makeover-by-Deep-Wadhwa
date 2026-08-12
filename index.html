@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Makeover by Deep Wadhwa - Grand Atelier</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&amp;family=Bodoni+Moda:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed-dim": "#c8c6c5",
+                        "on-primary-fixed-variant": "#374b43",
+                        "on-secondary-fixed": "#2a1701",
+                        "primary-fixed": "#d1e8dd",
+                        "primary": "#b5ccc2",
+                        "on-primary-container": "#6f857c",
+                        "error": "#ffb4ab",
+                        "surface-container-lowest": "#0e0e0e",
+                        "surface-variant": "#353535",
+                        "tertiary": "#c8c6c5",
+                        "surface-dim": "#131313",
+                        "on-primary-fixed": "#0b1f19",
+                        "secondary": "#e4c098",
+                        "outline-variant": "#424845",
+                        "on-surface-variant": "#c2c8c4",
+                        "inverse-surface": "#e5e2e1",
+                        "secondary-fixed-dim": "#e4c098",
+                        "primary-fixed-dim": "#b5ccc2",
+                        "tertiary-fixed": "#e4e2e1",
+                        "on-secondary-container": "#d2af88",
+                        "on-secondary": "#422c0f",
+                        "on-background": "#e5e2e1",
+                        "surface-container": "#20201f",
+                        "surface-container-high": "#2a2a2a",
+                        "surface": "#131313",
+                        "surface-container-highest": "#353535",
+                        "outline": "#8c928e",
+                        "on-primary": "#20342d",
+                        "on-surface": "#e5e2e1",
+                        "on-tertiary": "#303030",
+                        "background": "#131313",
+                        "surface-bright": "#393939",
+                        "on-secondary-fixed-variant": "#5b4223",
+                        "tertiary-container": "#171717",
+                        "secondary-fixed": "#ffddb8",
+                        "surface-tint": "#b5ccc2",
+                        "on-tertiary-fixed-variant": "#474746",
+                        "error-container": "#93000a",
+                        "surface-container-low": "#1c1b1b",
+                        "inverse-on-surface": "#313030",
+                        "on-tertiary-container": "#81807f",
+                        "primary-container": "#061a14",
+                        "on-tertiary-fixed": "#1b1c1b",
+                        "on-error-container": "#ffdad6",
+                        "on-error": "#690005",
+                        "secondary-container": "#5b4223",
+                        "inverse-primary": "#4e635b"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-desktop": "80px",
+                        "margin-mobile": "24px",
+                        "gutter": "32px",
+                        "section-gap": "160px",
+                        "container-max": "1440px",
+                        "unit": "8px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Hanken Grotesk"],
+                        "display-lg-mobile": ["Bodoni Moda"],
+                        "headline-lg-mobile": ["Bodoni Moda"],
+                        "headline-md": ["Bodoni Moda"],
+                        "label-caps": ["Hanken Grotesk"],
+                        "headline-lg": ["Bodoni Moda"],
+                        "label-md": ["Hanken Grotesk"],
+                        "display-lg": ["Bodoni Moda"],
+                        "body-md": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", { "lineHeight": "1.6", "letterSpacing": "0.01em", "fontWeight": "400" }],
+                        "display-lg-mobile": ["44px", { "lineHeight": "1.1", "fontWeight": "600" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "1.2", "fontWeight": "500" }],
+                        "headline-md": ["32px", { "lineHeight": "1.3", "fontWeight": "500" }],
+                        "label-caps": ["12px", { "lineHeight": "1.0", "letterSpacing": "0.15em", "fontWeight": "600" }],
+                        "headline-lg": ["48px", { "lineHeight": "1.2", "fontWeight": "500" }],
+                        "label-md": ["14px", { "lineHeight": "1.4", "fontWeight": "500" }],
+                        "display-lg": ["72px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        
+        .hero-overlay {
+            background: linear-gradient(to top, rgba(6, 26, 20, 0.9) 0%, rgba(6, 26, 20, 0.4) 50%, rgba(6, 26, 20, 0.1) 100%);
+        }
+        
+        .gold-border {
+            border: 1px solid #e4c098;
+        }
+        
+        .ambient-shadow {
+            box-shadow: 0 20px 50px -10px rgba(6, 26, 20, 0.5);
+        }
+
+        /* ── Scroll-Scrub Loader ────────────────────────── */
+        .scroll-scrub-loader {
+            position: fixed;
+            bottom: 32px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 9999;
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        .scroll-scrub-loader.loaded {
+            opacity: 0;
+            transform: translateX(-50%) translateY(20px);
+            pointer-events: none;
+        }
+        .loader-track {
+            width: 140px;
+            height: 3px;
+            background: rgba(228, 192, 152, 0.15);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        .loader-bar {
+            height: 100%;
+            width: 0%;
+            background: #e4c098;
+            border-radius: 4px;
+            transition: width 0.15s ease;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background antialiased selection:bg-secondary selection:text-primary-container" style="scroll-behavior: smooth;">
+<!-- TopNavBar -->
+<nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-500 bg-background/95 backdrop-blur-xl border-b border-secondary/10">
+<div class="flex justify-between items-center h-20 px-margin-desktop max-w-container-max mx-auto">
+<a class="font-display-lg text-headline-md text-secondary tracking-tighter" href="#hero">
+                Makeover by Deep Wadhwa
+            </a>
+<div class="hidden md:flex items-center gap-8">
+<a class="nav-link text-on-surface-variant hover:text-secondary transition-colors duration-300 font-label-caps text-label-caps tracking-[0.2em]" href="#portfolio">Portfolio</a>
+<a class="nav-link text-on-surface-variant hover:text-secondary transition-colors duration-300 font-label-caps text-label-caps tracking-[0.2em]" href="#services">Services</a>
+<a class="nav-link text-on-surface-variant hover:text-secondary transition-colors duration-300 font-label-caps text-label-caps tracking-[0.2em]" href="#atelier">Atelier</a>
+<a class="nav-link text-on-surface-variant hover:text-secondary transition-colors duration-300 font-label-caps text-label-caps tracking-[0.2em]" href="#academy">Academy</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-300 font-label-caps text-label-caps tracking-[0.2em]" href="booking.html">Contact</a>
+</div>
+<a href="booking.html" class="hidden md:inline-flex items-center justify-center bg-secondary text-primary-container font-label-caps text-label-caps px-6 py-3 rounded-full hover:opacity-80 transition-opacity scale-95 hover:scale-100 duration-200">
+                Book Appointment
+            </a>
+<button id="mobile-menu-btn" class="md:hidden text-secondary">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+</div>
+</nav>
+<!-- Mobile Menu -->
+<div id="mobile-menu" class="fixed inset-0 z-40 bg-background/98 backdrop-blur-2xl flex flex-col items-center justify-center gap-8 transition-all duration-500 opacity-0 pointer-events-none" style="transform: translateY(-100%);">
+<a class="text-secondary font-label-caps text-label-caps tracking-[0.2em] text-lg" href="#portfolio">Portfolio</a>
+<a class="text-secondary font-label-caps text-label-caps tracking-[0.2em] text-lg" href="#services">Services</a>
+<a class="text-secondary font-label-caps text-label-caps tracking-[0.2em] text-lg" href="#atelier">Atelier</a>
+<a class="text-secondary font-label-caps text-label-caps tracking-[0.2em] text-lg" href="#academy">Academy</a>
+<a class="text-secondary font-label-caps text-label-caps tracking-[0.2em] text-lg" href="booking.html">Contact</a>
+<a href="booking.html" class="bg-secondary text-primary-container font-label-caps text-label-caps px-8 py-4 rounded-full mt-4">Book Appointment</a>
+<button id="mobile-menu-close" class="absolute top-6 right-6 text-secondary">
+<span class="material-symbols-outlined" style="font-size:32px">close</span>
+</button>
+</div>
+<main class="pt-20">
+<!-- Hero Section -->
+<section id="hero" class="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-cover bg-center" data-alt="A breathtaking, cinematic portrait of a high-fashion model styled with exquisite bridal couture and flawless makeup." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB_qW664xKl4xvbU1P4br0HvPawD2F1hUibcoVMwyLNtnph25mOqLFp5XhRPzu6ph07dOtvAwu1siLnC4vKAfpEhWeKbFwfzqPxYTobMEGOT9E2bI2INj2henNmH9-zLaLGky5JOCMZ_YQEBrkYpE5drR8K7Qujl0cR78aD7QKzuu0UXt4bzK5gomjhti4HC-N-F1ajz_zkOHzrUoXKNZaAUk_KJojJNDpzs9FUlwlQw_k-WGo3yfiU')"></div>
+<div class="absolute inset-0 hero-overlay"></div>
+</div>
+<div class="relative z-10 text-center px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto mt-20">
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-inverse-surface mb-6 drop-shadow-2xl">
+                    Masterful Artistry Unveiled
+                </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto mb-10">
+                    Where high-fashion editorial prestige meets meticulous craftsmanship. Discover a world of quiet luxury and transformative beauty.
+                </p>
+<div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+<a href="#portfolio" class="bg-secondary text-primary-container font-label-caps text-label-caps px-8 py-4 rounded-full hover:opacity-90 transition-opacity w-full sm:w-auto text-center">
+                        Explore Portfolio
+                    </a>
+<a href="#atelier" class="gold-border text-secondary font-label-caps text-label-caps px-8 py-4 rounded-full hover:bg-secondary/10 transition-colors w-full sm:w-auto text-center">
+                        Discover The Philosophy
+                    </a>
+</div>
+</div>
+</section>
+<!-- Curated Signatures (Portfolio) -->
+<section id="portfolio" class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="text-center mb-24">
+<h2 class="font-display-lg text-headline-lg-mobile md:text-headline-lg text-secondary mb-4">Curated Signatures</h2>
+<div class="w-16 h-px bg-secondary mx-auto"></div>
+</div>
+</section>
+<!-- Signature Services -->
+<section id="services" class="py-section-gap px-margin-mobile md:px-margin-desktop">
+<div class="max-w-container-max mx-auto">
+<div class="text-center mb-24">
+<h2 class="font-display-lg text-headline-lg-mobile md:text-headline-lg text-secondary mb-4">Signature Services</h2>
+<div class="w-16 h-px bg-secondary mx-auto"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16">
+<div class="group">
+<div class="flex items-start gap-6">
+<span class="text-secondary text-5xl font-display-lg leading-none opacity-40">01</span>
+<div>
+<h3 class="font-headline-md text-headline-md text-inverse-surface mb-3">Bridal Artistry</h3>
+<p class="font-body-lg text-body-lg text-on-surface-variant">From intimate ceremonies to grand celebrations, our bridal artistry transforms your vision into a breathtaking reality with meticulous attention to every detail.</p>
+</div>
+</div>
+</div>
+<div class="group">
+<div class="flex items-start gap-6">
+<span class="text-secondary text-5xl font-display-lg leading-none opacity-40">02</span>
+<div>
+<h3 class="font-headline-md text-headline-md text-inverse-surface mb-3">Editorial &amp; Campaign</h3>
+<p class="font-body-lg text-body-lg text-on-surface-variant">High-fashion editorial looks crafted for magazines, ad campaigns, and creative productions that push the boundaries of beauty.</p>
+</div>
+</div>
+</div>
+<div class="group">
+<div class="flex items-start gap-6">
+<span class="text-secondary text-5xl font-display-lg leading-none opacity-40">03</span>
+<div>
+<h3 class="font-headline-md text-headline-md text-inverse-surface mb-3">Celebrity &amp; Red Carpet</h3>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Flawless, camera-ready styling for public appearances, award ceremonies, film premieres, and high-profile events worldwide.</p>
+</div>
+</div>
+</div>
+<div class="group">
+<div class="flex items-start gap-6">
+<span class="text-secondary text-5xl font-display-lg leading-none opacity-40">04</span>
+<div>
+<h3 class="font-headline-md text-headline-md text-inverse-surface mb-3">Destination Weddings</h3>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Our team travels globally, bringing the full Grand Atelier experience to your chosen destination — from Paris to Udaipur and beyond.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- The Atelier Philosophy -->
+<section id="atelier" class="py-section-gap px-margin-mobile md:px-margin-desktop border-y border-outline-variant/30">
+<div class="max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+<div class="md:col-span-8 md:col-start-3 mb-12 md:mb-0">
+<h2 class="font-display-lg text-headline-lg-mobile md:text-headline-lg text-secondary mb-8">
+                        The Atelier Philosophy
+                    </h2>
+<div class="font-body-lg text-body-lg text-on-surface-variant space-y-6">
+<p>
+                            True artistry requires an uncompromising dedication to detail. At the Grand Atelier, we approach every face as a unique canvas, deserving of bespoke techniques and the finest materials.
+                        </p>
+<p>
+                            Our philosophy is rooted in architectural precision and atmospheric depth. We do not merely apply makeup; we sculpt light and shadow to reveal your most powerful, luminous self.
+                        </p>
+</div>
+<div class="mt-12">
+<a class="inline-flex items-center gap-2 font-label-caps text-label-caps text-secondary hover:opacity-80 transition-opacity border-b border-secondary pb-1" href="booking.html">
+                            Meet Deep Wadhwa <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Academy Section -->
+<section id="academy" class="py-section-gap px-margin-mobile md:px-margin-desktop">
+<div class="max-w-container-max mx-auto">
+<div class="text-center mb-24">
+<h2 class="font-display-lg text-headline-lg-mobile md:text-headline-lg text-secondary mb-4">The Academy</h2>
+<div class="w-16 h-px bg-secondary mx-auto mb-8"></div>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Learn the art of transformative beauty from industry masters. Our curated programs blend traditional craftsmanship with contemporary techniques.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="rounded-sm p-8 hover:bg-secondary/5 transition-colors duration-300">
+<p class="font-label-caps text-label-caps text-secondary tracking-[0.2em] mb-4">6 MONTHS</p>
+<h3 class="font-headline-md text-headline-md text-inverse-surface mb-4">Master Artistry Program</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Comprehensive training from foundation techniques to advanced editorial artistry. Includes hands-on practice with live models and industry mentorship.</p>
+</div>
+<div class="rounded-sm p-8 hover:bg-secondary/5 transition-colors duration-300">
+<p class="font-label-caps text-label-caps text-secondary tracking-[0.2em] mb-4">2 WEEKS</p>
+<h3 class="font-headline-md text-headline-md text-inverse-surface mb-4">Bridal Masterclass</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Intensive bridal makeup specialization covering diverse skin tones, traditional and contemporary styles, and client consultation techniques.</p>
+</div>
+<div class="rounded-sm p-8 hover:bg-secondary/5 transition-colors duration-300">
+<p class="font-label-caps text-label-caps text-secondary tracking-[0.2em] mb-4">1 WEEK</p>
+<h3 class="font-headline-md text-headline-md text-inverse-surface mb-4">Editorial Workshop</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Fashion-forward techniques taught by industry professionals. Learn to create editorial looks for print, digital campaigns, and runway shows.</p>
+</div>
+</div>
+<div class="text-center mt-16">
+<a href="booking.html" class="inline-flex items-center gap-2 bg-secondary text-primary-container font-label-caps text-label-caps px-8 py-4 rounded-full hover:opacity-90 transition-opacity">
+Begin Your Journey <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest w-full py-10 border-t border-outline-variant">
+<div class="flex flex-col md:flex-row justify-between items-center gap-4 px-margin-desktop max-w-container-max mx-auto">
+<a class="font-display-lg text-headline-md text-secondary" href="#hero">Makeover by Deep Wadhwa</a>
+<div class="flex gap-6">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors" href="#">Privacy Policy</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors" href="#">Terms of Service</a>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">© 2024 MAKEOVER BY DEEP WADHWA</p>
+</div>
+</footer>
+<script src="scroll-scrub.js"></script>
+<script>
+// ── Smooth scroll for internal anchor links only ──
+document.addEventListener('click', (e) => {
+  const link = e.target.closest('a[href^="#"]');
+  if (!link) return;
+  const id = link.getAttribute('href').slice(1);
+  const target = document.getElementById(id);
+  if (target) {
+    e.preventDefault();
+    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+});
+
+// ── Mobile menu toggle ──
+const menuBtn = document.getElementById('mobile-menu-btn');
+const menuClose = document.getElementById('mobile-menu-close');
+const mobileMenu = document.getElementById('mobile-menu');
+
+function openMenu() {
+  mobileMenu.style.transform = 'translateY(0)';
+  mobileMenu.style.opacity = '1';
+  mobileMenu.style.pointerEvents = 'auto';
+  document.body.style.overflow = 'hidden';
+}
+function closeMenu() {
+  mobileMenu.style.transform = 'translateY(-100%)';
+  mobileMenu.style.opacity = '0';
+  mobileMenu.style.pointerEvents = 'none';
+  document.body.style.overflow = '';
+}
+
+if (menuBtn) menuBtn.addEventListener('click', openMenu);
+if (menuClose) menuClose.addEventListener('click', closeMenu);
+if (mobileMenu) {
+  mobileMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', closeMenu);
+  });
+}
+
+// ── Active nav link & navbar scroll hide behavior ──
+const navbar = document.getElementById('navbar');
+const portfolioEl = document.getElementById('portfolio');
+const navLinks = document.querySelectorAll('.nav-link');
+const sectionIds = ['hero', 'portfolio', 'services', 'atelier', 'academy'];
+
+function updateScrollUI() {
+  const scrollY = window.scrollY;
+
+  // Calculate top of Curated Signatures section dynamically
+  const portfolioTop = portfolioEl ? (portfolioEl.getBoundingClientRect().top + scrollY) : Infinity;
+  
+  // Hide navbar (slide UP) when scrolling reaches Curated Signatures section
+  const isPastCuratedSignatures = scrollY >= (portfolioTop - 120);
+
+  if (isPastCuratedSignatures) {
+    navbar.style.transform = 'translateY(-100%)';
+  } else {
+    navbar.style.transform = 'translateY(0)';
+
+    // Transparency control while visible in Hero area
+    if (scrollY < 50) {
+      navbar.classList.add('bg-background/95', 'backdrop-blur-xl', 'border-b', 'border-secondary/10');
+      navbar.classList.remove('bg-transparent', 'backdrop-blur-none', 'border-transparent');
+    } else {
+      navbar.classList.remove('bg-background/95', 'backdrop-blur-xl', 'border-b', 'border-secondary/10');
+      navbar.classList.add('bg-transparent', 'backdrop-blur-none', 'border-transparent');
+    }
+  }
+
+  // Active nav link highlighting
+  const checkY = scrollY + 120;
+  let current = 'hero';
+  sectionIds.forEach(id => {
+    const el = document.getElementById(id);
+    if (el && el.getBoundingClientRect().top + window.scrollY <= checkY) {
+      current = id;
+    }
+  });
+  navLinks.forEach(link => {
+    const href = link.getAttribute('href').slice(1);
+    if (href === current) {
+      link.classList.add('text-secondary', 'border-b', 'border-secondary', 'pb-1');
+      link.classList.remove('text-on-surface-variant');
+    } else {
+      link.classList.remove('text-secondary', 'border-b', 'border-secondary', 'pb-1');
+      link.classList.add('text-on-surface-variant');
+    }
+  });
+}
+
+window.addEventListener('scroll', updateScrollUI, { passive: true });
+updateScrollUI();
+</script>
+</body></html>
