@@ -197,8 +197,8 @@
 <body class="bg-background text-on-background antialiased selection:bg-secondary selection:text-primary-container" style="scroll-behavior: smooth;">
 <!-- TopNavBar -->
 <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-500 bg-background/95 backdrop-blur-xl border-b border-secondary/10">
-<div class="flex justify-between items-center h-20 px-margin-desktop max-w-container-max mx-auto">
-<a class="nav-brand font-display-lg text-headline-md text-secondary tracking-tighter" href="#hero">
+<div class="flex justify-between items-center h-20 px-4 sm:px-8 md:px-margin-desktop max-w-container-max mx-auto">
+<a class="nav-brand font-display-lg text-lg sm:text-2xl md:text-headline-md text-secondary tracking-tight whitespace-nowrap overflow-hidden text-ellipsis mr-2" href="#hero">
                 Makeover by Deep Wadhwa
             </a>
 <div class="hidden md:flex items-center gap-10">
@@ -211,8 +211,8 @@
 <a href="booking.html" class="btn-book hidden md:inline-flex items-center justify-center bg-secondary text-primary-container font-label-caps text-label-caps px-7 py-3.5 rounded-full font-semibold">
                 Book Appointment
             </a>
-<button id="mobile-menu-btn" class="md:hidden text-secondary">
-<span class="material-symbols-outlined" data-icon="menu">menu</span>
+<button id="mobile-menu-btn" class="md:hidden text-secondary p-1 flex-shrink-0">
+<span class="material-symbols-outlined style='font-size:28px'" data-icon="menu">menu</span>
 </button>
 </div>
 </nav>
@@ -230,76 +230,76 @@
 </div>
 <main class="pt-20">
 <!-- Hero Section -->
-<section id="hero" class="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
+<section id="hero" class="relative min-h-[85vh] sm:min-h-[90vh] flex items-center justify-center overflow-hidden">
 <div class="absolute inset-0 z-0">
 <div class="w-full h-full bg-cover bg-center" data-alt="A breathtaking, cinematic portrait of a high-fashion model styled with exquisite bridal couture and flawless makeup." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB_qW664xKl4xvbU1P4br0HvPawD2F1hUibcoVMwyLNtnph25mOqLFp5XhRPzu6ph07dOtvAwu1siLnC4vKAfpEhWeKbFwfzqPxYTobMEGOT9E2bI2INj2henNmH9-zLaLGky5JOCMZ_YQEBrkYpE5drR8K7Qujl0cR78aD7QKzuu0UXt4bzK5gomjhti4HC-N-F1ajz_zkOHzrUoXKNZaAUk_KJojJNDpzs9FUlwlQw_k-WGo3yfiU')"></div>
 <div class="absolute inset-0 hero-overlay"></div>
 </div>
-<div class="relative z-10 text-center px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto mt-20">
-<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-inverse-surface mb-6 drop-shadow-2xl">
+<div class="relative z-10 text-center px-4 sm:px-8 md:px-margin-desktop max-w-container-max mx-auto mt-12 sm:mt-20">
+<h1 class="font-display-lg text-3xl sm:text-5xl md:text-display-lg text-inverse-surface mb-4 sm:mb-6 drop-shadow-2xl leading-tight">
                     Masterful Artistry Unveiled
                 </h1>
-<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto mb-10">
+<p class="font-body-lg text-sm sm:text-body-lg text-on-surface-variant max-w-2xl mx-auto mb-8 sm:mb-10">
                     Where high-fashion editorial prestige meets meticulous craftsmanship. Discover a world of quiet luxury and transformative beauty.
                 </p>
-<div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-<a href="#portfolio" class="bg-secondary text-primary-container font-label-caps text-label-caps px-8 py-4 rounded-full hover:opacity-90 transition-opacity w-full sm:w-auto text-center">
+<div class="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 max-w-xs sm:max-w-none mx-auto">
+<a href="#portfolio" class="bg-secondary text-primary-container font-label-caps text-label-caps px-6 py-3.5 sm:px-8 sm:py-4 rounded-full hover:opacity-90 transition-opacity w-full sm:w-auto text-center">
                         Explore Portfolio
                     </a>
-<a href="#atelier" class="gold-border text-secondary font-label-caps text-label-caps px-8 py-4 rounded-full hover:bg-secondary/10 transition-colors w-full sm:w-auto text-center">
+<a href="#atelier" class="gold-border text-secondary font-label-caps text-label-caps px-6 py-3.5 sm:px-8 sm:py-4 rounded-full hover:bg-secondary/10 transition-colors w-full sm:w-auto text-center">
                         Discover The Philosophy
                     </a>
 </div>
 </div>
 </section>
 <!-- Curated Signatures (Portfolio) -->
-<section id="portfolio" class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
-<div class="text-center mb-24">
-<h2 class="font-display-lg text-headline-lg-mobile md:text-headline-lg text-secondary mb-4">Curated Signatures</h2>
+<section id="portfolio" class="py-16 sm:py-24 md:py-section-gap px-4 sm:px-8 md:px-margin-desktop max-w-container-max mx-auto">
+<div class="text-center mb-12 sm:mb-20">
+<h2 class="font-display-lg text-3xl sm:text-headline-lg-mobile md:text-headline-lg text-secondary mb-4">Curated Signatures</h2>
 <div class="w-16 h-px bg-secondary mx-auto"></div>
 </div>
 </section>
 <!-- Signature Services -->
-<section id="services" class="py-section-gap px-margin-mobile md:px-margin-desktop">
+<section id="services" class="py-16 sm:py-24 md:py-section-gap px-4 sm:px-8 md:px-margin-desktop">
 <div class="max-w-container-max mx-auto">
-<div class="text-center mb-24">
-<h2 class="font-display-lg text-headline-lg-mobile md:text-headline-lg text-secondary mb-4">Signature Services</h2>
+<div class="text-center mb-12 sm:mb-20">
+<h2 class="font-display-lg text-3xl sm:text-headline-lg-mobile md:text-headline-lg text-secondary mb-4">Signature Services</h2>
 <div class="w-16 h-px bg-secondary mx-auto"></div>
 </div>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 md:gap-16">
 <div class="group">
-<div class="flex items-start gap-6">
-<span class="text-secondary text-5xl font-display-lg leading-none opacity-40">01</span>
+<div class="flex items-start gap-4 sm:gap-6">
+<span class="text-secondary text-4xl sm:text-5xl font-display-lg leading-none opacity-40">01</span>
 <div>
-<h3 class="font-headline-md text-headline-md text-inverse-surface mb-3">Bridal Artistry</h3>
-<p class="font-body-lg text-body-lg text-on-surface-variant">From intimate ceremonies to grand celebrations, our bridal artistry transforms your vision into a breathtaking reality with meticulous attention to every detail.</p>
-</div>
-</div>
-</div>
-<div class="group">
-<div class="flex items-start gap-6">
-<span class="text-secondary text-5xl font-display-lg leading-none opacity-40">02</span>
-<div>
-<h3 class="font-headline-md text-headline-md text-inverse-surface mb-3">Editorial &amp; Campaign</h3>
-<p class="font-body-lg text-body-lg text-on-surface-variant">High-fashion editorial looks crafted for magazines, ad campaigns, and creative productions that push the boundaries of beauty.</p>
+<h3 class="font-headline-md text-xl sm:text-headline-md text-inverse-surface mb-2 sm:mb-3">Bridal Artistry</h3>
+<p class="font-body-lg text-sm sm:text-body-lg text-on-surface-variant">From intimate ceremonies to grand celebrations, our bridal artistry transforms your vision into a breathtaking reality with meticulous attention to every detail.</p>
 </div>
 </div>
 </div>
 <div class="group">
-<div class="flex items-start gap-6">
-<span class="text-secondary text-5xl font-display-lg leading-none opacity-40">03</span>
+<div class="flex items-start gap-4 sm:gap-6">
+<span class="text-secondary text-4xl sm:text-5xl font-display-lg leading-none opacity-40">02</span>
 <div>
-<h3 class="font-headline-md text-headline-md text-inverse-surface mb-3">Celebrity &amp; Red Carpet</h3>
-<p class="font-body-lg text-body-lg text-on-surface-variant">Flawless, camera-ready styling for public appearances, award ceremonies, film premieres, and high-profile events worldwide.</p>
+<h3 class="font-headline-md text-xl sm:text-headline-md text-inverse-surface mb-2 sm:mb-3">Editorial &amp; Campaign</h3>
+<p class="font-body-lg text-sm sm:text-body-lg text-on-surface-variant">High-fashion editorial looks crafted for magazines, ad campaigns, and creative productions that push the boundaries of beauty.</p>
 </div>
 </div>
 </div>
 <div class="group">
-<div class="flex items-start gap-6">
-<span class="text-secondary text-5xl font-display-lg leading-none opacity-40">04</span>
+<div class="flex items-start gap-4 sm:gap-6">
+<span class="text-secondary text-4xl sm:text-5xl font-display-lg leading-none opacity-40">03</span>
 <div>
-<h3 class="font-headline-md text-headline-md text-inverse-surface mb-3">Destination Weddings</h3>
-<p class="font-body-lg text-body-lg text-on-surface-variant">Our team travels globally, bringing the full Grand Atelier experience to your chosen destination — from Paris to Udaipur and beyond.</p>
+<h3 class="font-headline-md text-xl sm:text-headline-md text-inverse-surface mb-2 sm:mb-3">Celebrity &amp; Red Carpet</h3>
+<p class="font-body-lg text-sm sm:text-body-lg text-on-surface-variant">Flawless, camera-ready styling for public appearances, award ceremonies, film premieres, and high-profile events worldwide.</p>
+</div>
+</div>
+</div>
+<div class="group">
+<div class="flex items-start gap-4 sm:gap-6">
+<span class="text-secondary text-4xl sm:text-5xl font-display-lg leading-none opacity-40">04</span>
+<div>
+<h3 class="font-headline-md text-xl sm:text-headline-md text-inverse-surface mb-2 sm:mb-3">Destination Weddings</h3>
+<p class="font-body-lg text-sm sm:text-body-lg text-on-surface-variant">Our team travels globally, bringing the full Grand Atelier experience to your chosen destination — from Paris to Udaipur and beyond.</p>
 </div>
 </div>
 </div>
@@ -307,13 +307,13 @@
 </div>
 </section>
 <!-- The Atelier Philosophy -->
-<section id="atelier" class="py-section-gap px-margin-mobile md:px-margin-desktop border-y border-outline-variant/30">
+<section id="atelier" class="py-16 sm:py-24 md:py-section-gap px-4 sm:px-8 md:px-margin-desktop border-y border-outline-variant/30">
 <div class="max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
-<div class="md:col-span-8 md:col-start-3 mb-12 md:mb-0">
-<h2 class="font-display-lg text-headline-lg-mobile md:text-headline-lg text-secondary mb-8">
+<div class="md:col-span-8 md:col-start-3 mb-8 md:mb-0">
+<h2 class="font-display-lg text-3xl sm:text-headline-lg-mobile md:text-headline-lg text-secondary mb-6 sm:mb-8">
                         The Atelier Philosophy
                     </h2>
-<div class="font-body-lg text-body-lg text-on-surface-variant space-y-6">
+<div class="font-body-lg text-sm sm:text-body-lg text-on-surface-variant space-y-4 sm:space-y-6">
 <p>
                             True artistry requires an uncompromising dedication to detail. At the Grand Atelier, we approach every face as a unique canvas, deserving of bespoke techniques and the finest materials.
                         </p>
@@ -321,7 +321,7 @@
                             Our philosophy is rooted in architectural precision and atmospheric depth. We do not merely apply makeup; we sculpt light and shadow to reveal your most powerful, luminous self.
                         </p>
 </div>
-<div class="mt-12">
+<div class="mt-8 sm:mt-12">
 <a class="inline-flex items-center gap-2 font-label-caps text-label-caps text-secondary hover:opacity-80 transition-opacity border-b border-secondary pb-1" href="booking.html">
                             Meet Deep Wadhwa <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
 </a>
@@ -330,32 +330,32 @@
 </div>
 </section>
 <!-- Academy Section -->
-<section id="academy" class="py-section-gap px-margin-mobile md:px-margin-desktop">
+<section id="academy" class="py-16 sm:py-24 md:py-section-gap px-4 sm:px-8 md:px-margin-desktop">
 <div class="max-w-container-max mx-auto">
-<div class="text-center mb-24">
-<h2 class="font-display-lg text-headline-lg-mobile md:text-headline-lg text-secondary mb-4">The Academy</h2>
-<div class="w-16 h-px bg-secondary mx-auto mb-8"></div>
-<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Learn the art of transformative beauty from industry masters. Our curated programs blend traditional craftsmanship with contemporary techniques.</p>
+<div class="text-center mb-12 sm:mb-20">
+<h2 class="font-display-lg text-3xl sm:text-headline-lg-mobile md:text-headline-lg text-secondary mb-4">The Academy</h2>
+<div class="w-16 h-px bg-secondary mx-auto mb-6 sm:mb-8"></div>
+<p class="font-body-lg text-sm sm:text-body-lg text-on-surface-variant max-w-2xl mx-auto">Learn the art of transformative beauty from industry masters. Our curated programs blend traditional craftsmanship with contemporary techniques.</p>
 </div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-<div class="rounded-sm p-8 hover:bg-secondary/5 transition-colors duration-300">
-<p class="font-label-caps text-label-caps text-secondary tracking-[0.2em] mb-4">6 MONTHS</p>
-<h3 class="font-headline-md text-headline-md text-inverse-surface mb-4">Master Artistry Program</h3>
-<p class="font-body-md text-body-md text-on-surface-variant">Comprehensive training from foundation techniques to advanced editorial artistry. Includes hands-on practice with live models and industry mentorship.</p>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+<div class="rounded-sm p-6 sm:p-8 hover:bg-secondary/5 transition-colors duration-300 gold-border md:gold-border-0">
+<p class="font-label-caps text-label-caps text-secondary tracking-[0.2em] mb-3 sm:mb-4">6 MONTHS</p>
+<h3 class="font-headline-md text-xl sm:text-headline-md text-inverse-surface mb-3 sm:mb-4">Master Artistry Program</h3>
+<p class="font-body-md text-xs sm:text-body-md text-on-surface-variant">Comprehensive training from foundation techniques to advanced editorial artistry. Includes hands-on practice with live models and industry mentorship.</p>
 </div>
-<div class="rounded-sm p-8 hover:bg-secondary/5 transition-colors duration-300">
-<p class="font-label-caps text-label-caps text-secondary tracking-[0.2em] mb-4">2 WEEKS</p>
-<h3 class="font-headline-md text-headline-md text-inverse-surface mb-4">Bridal Masterclass</h3>
-<p class="font-body-md text-body-md text-on-surface-variant">Intensive bridal makeup specialization covering diverse skin tones, traditional and contemporary styles, and client consultation techniques.</p>
+<div class="rounded-sm p-6 sm:p-8 hover:bg-secondary/5 transition-colors duration-300 gold-border md:gold-border-0">
+<p class="font-label-caps text-label-caps text-secondary tracking-[0.2em] mb-3 sm:mb-4">2 WEEKS</p>
+<h3 class="font-headline-md text-xl sm:text-headline-md text-inverse-surface mb-3 sm:mb-4">Bridal Masterclass</h3>
+<p class="font-body-md text-xs sm:text-body-md text-on-surface-variant">Intensive bridal makeup specialization covering diverse skin tones, traditional and contemporary styles, and client consultation techniques.</p>
 </div>
-<div class="rounded-sm p-8 hover:bg-secondary/5 transition-colors duration-300">
-<p class="font-label-caps text-label-caps text-secondary tracking-[0.2em] mb-4">1 WEEK</p>
-<h3 class="font-headline-md text-headline-md text-inverse-surface mb-4">Editorial Workshop</h3>
-<p class="font-body-md text-body-md text-on-surface-variant">Fashion-forward techniques taught by industry professionals. Learn to create editorial looks for print, digital campaigns, and runway shows.</p>
+<div class="rounded-sm p-6 sm:p-8 hover:bg-secondary/5 transition-colors duration-300 gold-border md:gold-border-0">
+<p class="font-label-caps text-label-caps text-secondary tracking-[0.2em] mb-3 sm:mb-4">1 WEEK</p>
+<h3 class="font-headline-md text-xl sm:text-headline-md text-inverse-surface mb-3 sm:mb-4">Editorial Workshop</h3>
+<p class="font-body-md text-xs sm:text-body-md text-on-surface-variant">Fashion-forward techniques taught by industry professionals. Learn to create editorial looks for print, digital campaigns, and runway shows.</p>
 </div>
 </div>
-<div class="text-center mt-16">
-<a href="booking.html" class="inline-flex items-center gap-2 bg-secondary text-primary-container font-label-caps text-label-caps px-8 py-4 rounded-full hover:opacity-90 transition-opacity">
+<div class="text-center mt-12 sm:mt-16">
+<a href="booking.html" class="inline-flex items-center gap-2 bg-secondary text-primary-container font-label-caps text-label-caps px-6 py-3.5 sm:px-8 sm:py-4 rounded-full hover:opacity-90 transition-opacity">
 Begin Your Journey <span class="material-symbols-outlined text-sm">arrow_forward</span>
 </a>
 </div>
@@ -363,11 +363,11 @@ Begin Your Journey <span class="material-symbols-outlined text-sm">arrow_forward
 </section>
 </main>
 <!-- Footer -->
-<footer class="bg-surface-container-lowest w-full py-10 border-t border-outline-variant">
-<div class="flex flex-col md:flex-row justify-between items-center gap-4 px-margin-desktop max-w-container-max mx-auto">
-<a class="font-display-lg text-headline-md text-secondary" href="#hero">Makeover by Deep Wadhwa</a>
+<footer class="bg-surface-container-lowest w-full py-8 sm:py-10 border-t border-outline-variant">
+<div class="flex flex-col md:flex-row justify-between items-center gap-4 px-4 sm:px-8 md:px-margin-desktop max-w-container-max mx-auto">
+<a class="font-display-lg text-lg sm:text-headline-md text-secondary" href="#hero">Makeover by Deep Wadhwa</a>
 <div class="flex gap-6">
-<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors" href="#">Privacy Policy</a>
+<a class="font-body-md text-xs sm:text-body-md text-on-surface-variant hover:text-secondary transition-colors" href="#">Privacy Policy</a>
 <a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors" href="#">Terms of Service</a>
 </div>
 <p class="font-body-md text-body-md text-on-surface-variant text-sm">© 2024 MAKEOVER BY DEEP WADHWA</p>
