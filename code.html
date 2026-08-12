@@ -367,27 +367,42 @@ if (mobileMenu) {
   });
 }
 
-// ── Active nav link & navbar scroll hide behavior ──
+// ── Active nav link & navbar scroll hide / scroll-stop reveal behavior ──
 const navbar = document.getElementById('navbar');
 const portfolioEl = document.getElementById('portfolio');
 const navLinks = document.querySelectorAll('.nav-link');
 const sectionIds = ['hero', 'portfolio', 'services', 'atelier', 'academy'];
+let scrollStopTimer = null;
 
 function updateScrollUI() {
   const scrollY = window.scrollY;
 
+  // Clear existing scroll-stop timer
+  if (scrollStopTimer !== null) {
+    clearTimeout(scrollStopTimer);
+  }
+
   // Calculate top of Curated Signatures section dynamically
   const portfolioTop = portfolioEl ? (portfolioEl.getBoundingClientRect().top + scrollY) : Infinity;
-  
-  // Hide navbar (slide UP) when scrolling reaches Curated Signatures section
   const isPastCuratedSignatures = scrollY >= (portfolioTop - 120);
 
   if (isPastCuratedSignatures) {
+    // While actively scrolling past Curated Signatures: hide navbar (slide UP)
     navbar.style.transform = 'translateY(-100%)';
+    navbar.classList.remove('bg-background/95', 'backdrop-blur-xl', 'border-b', 'border-secondary/10');
+    navbar.classList.add('bg-transparent', 'backdrop-blur-none', 'border-transparent');
+
+    // When scrolling stops (no scroll event for 250ms), reveal transparent navbar
+    scrollStopTimer = setTimeout(() => {
+      navbar.style.transform = 'translateY(0)';
+      navbar.classList.remove('bg-background/95', 'backdrop-blur-xl', 'border-b', 'border-secondary/10');
+      navbar.classList.add('bg-transparent', 'backdrop-blur-none', 'border-transparent');
+    }, 250);
+
   } else {
+    // In Hero area: always visible
     navbar.style.transform = 'translateY(0)';
 
-    // Transparency control while visible in Hero area
     if (scrollY < 50) {
       navbar.classList.add('bg-background/95', 'backdrop-blur-xl', 'border-b', 'border-secondary/10');
       navbar.classList.remove('bg-transparent', 'backdrop-blur-none', 'border-transparent');
