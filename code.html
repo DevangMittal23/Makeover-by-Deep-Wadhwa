@@ -198,7 +198,7 @@
 <!-- TopNavBar -->
 <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-500 bg-background/95 backdrop-blur-xl border-b border-secondary/10">
 <div class="flex justify-between items-center h-20 px-4 sm:px-8 md:px-margin-desktop max-w-container-max mx-auto">
-<a class="nav-brand font-display-lg text-lg sm:text-2xl md:text-headline-md text-secondary tracking-tight whitespace-nowrap overflow-hidden text-ellipsis mr-2" href="#hero">
+<a class="nav-brand font-display-lg text-base sm:text-xl md:text-headline-md text-secondary tracking-wide whitespace-nowrap overflow-hidden text-ellipsis mr-2" href="#hero">
                 Makeover by Deep Wadhwa
             </a>
 <div class="hidden md:flex items-center gap-10">
@@ -219,7 +219,7 @@
 <!-- Mobile Menu -->
 <div id="mobile-menu" class="fixed inset-0 z-40 bg-background/98 backdrop-blur-2xl flex flex-col justify-between items-center py-6 px-6 transition-all duration-500 opacity-0 pointer-events-none" style="transform: translateY(-100%);">
 <div class="w-full flex justify-between items-center h-16 max-w-container-max">
-<a class="font-display-lg text-lg text-secondary tracking-tight" href="#hero">
+<a class="font-display-lg text-base sm:text-xl text-secondary tracking-wide opacity-90" href="#hero">
             Makeover by Deep Wadhwa
         </a>
 </div>
@@ -428,21 +428,6 @@ let scrollStopTimer = null;
 
 function updateScrollUI() {
   const scrollY = window.scrollY;
-  const brandLogo = document.querySelector('.nav-brand');
-  const isMobile = window.innerWidth < 768;
-
-  // Control brand logo visibility on mobile past top area (so ONLY the 3-line menu icon shows)
-  if (brandLogo) {
-    if (isMobile && scrollY >= 50) {
-      brandLogo.style.opacity = '0';
-      brandLogo.style.pointerEvents = 'none';
-      brandLogo.style.visibility = 'hidden';
-    } else {
-      brandLogo.style.opacity = '1';
-      brandLogo.style.pointerEvents = 'auto';
-      brandLogo.style.visibility = 'visible';
-    }
-  }
 
   // Clear existing scroll-stop timer
   if (scrollStopTimer !== null) {
