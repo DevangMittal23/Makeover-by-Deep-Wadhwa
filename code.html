@@ -224,9 +224,6 @@
 <a class="text-secondary font-label-caps text-label-caps tracking-[0.2em] text-lg" href="#academy">Academy</a>
 <a class="text-secondary font-label-caps text-label-caps tracking-[0.2em] text-lg" href="booking.html">Contact</a>
 <a href="booking.html" class="bg-secondary text-primary-container font-label-caps text-label-caps px-8 py-4 rounded-full mt-4">Book Appointment</a>
-<button id="mobile-menu-close" class="absolute top-6 right-6 text-secondary">
-<span class="material-symbols-outlined" style="font-size:32px">close</span>
-</button>
 </div>
 <main class="pt-20">
 <!-- Hero Section -->
@@ -389,27 +386,28 @@ document.addEventListener('click', (e) => {
 
 // ── Mobile menu toggle ──
 const menuBtn = document.getElementById('mobile-menu-btn');
-const menuClose = document.getElementById('mobile-menu-close');
 const mobileMenu = document.getElementById('mobile-menu');
 
-function openMenu() {
-  mobileMenu.style.transform = 'translateY(0)';
-  mobileMenu.style.opacity = '1';
-  mobileMenu.style.pointerEvents = 'auto';
-  document.body.style.overflow = 'hidden';
-}
-function closeMenu() {
-  mobileMenu.style.transform = 'translateY(-100%)';
-  mobileMenu.style.opacity = '0';
-  mobileMenu.style.pointerEvents = 'none';
-  document.body.style.overflow = '';
+function toggleMenu() {
+  const isOpen = mobileMenu.style.opacity === '1';
+  if (isOpen) {
+    mobileMenu.style.transform = 'translateY(-100%)';
+    mobileMenu.style.opacity = '0';
+    mobileMenu.style.pointerEvents = 'none';
+    document.body.style.overflow = '';
+  } else {
+    mobileMenu.style.transform = 'translateY(0)';
+    mobileMenu.style.opacity = '1';
+    mobileMenu.style.pointerEvents = 'auto';
+    document.body.style.overflow = 'hidden';
+  }
 }
 
-if (menuBtn) menuBtn.addEventListener('click', openMenu);
-if (menuClose) menuClose.addEventListener('click', closeMenu);
+if (menuBtn) menuBtn.addEventListener('click', toggleMenu);
 if (mobileMenu) {
-  mobileMenu.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', closeMenu);
+  mobileMenu.addEventListener('click', (e) => {
+    // Close menu when tapping links or overlay area
+    toggleMenu();
   });
 }
 
@@ -422,6 +420,21 @@ let scrollStopTimer = null;
 
 function updateScrollUI() {
   const scrollY = window.scrollY;
+  const brandLogo = document.querySelector('.nav-brand');
+  const isMobile = window.innerWidth < 768;
+
+  // Control brand logo visibility on mobile past top area (so ONLY the 3-line menu icon shows)
+  if (brandLogo) {
+    if (isMobile && scrollY >= 50) {
+      brandLogo.style.opacity = '0';
+      brandLogo.style.pointerEvents = 'none';
+      brandLogo.style.visibility = 'hidden';
+    } else {
+      brandLogo.style.opacity = '1';
+      brandLogo.style.pointerEvents = 'auto';
+      brandLogo.style.visibility = 'visible';
+    }
+  }
 
   // Clear existing scroll-stop timer
   if (scrollStopTimer !== null) {
@@ -478,6 +491,7 @@ function updateScrollUI() {
 }
 
 window.addEventListener('scroll', updateScrollUI, { passive: true });
+window.addEventListener('resize', updateScrollUI, { passive: true });
 updateScrollUI();
 </script>
 </body></html>
